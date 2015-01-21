@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+/** Styles pour mon header **/
+header {
+  background-color: white;
+  width: auto;
+}
+
+/* Mes Classes */
+h2 {
+font-family: Helvetica,sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+h3 {
+  font-weight:lighter;
+  font-size:17px ;
+  margin-bottom: 20px;
+  font-family: helvetica;
+}
+
+h4 {
+  font-family: helvetica;
+  font-weight: lighter;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-left: 90px;
+  float: left;
+}
+
+#logo {
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.container nav {
+  float:right;
+  padding-top: 30px;
+}
+
+#menutop li {
+  display: inline;
+  list-style-type: none;
+}
+
+#menutop a {
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+  color: silver;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+/** Styles pour ma bannière **/
+
+#banner {
+  background-image: url("../assets/hero-tour.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+ .middle {
+  text-align: center;
+  padding-top: 125px;
+  margin-bottom: 210px;
+}
+
+#banner h1 {
+  font: normal 3em helvetica;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+#banner h1::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5em;
+  width: 300px;
+  height: 5px;
+  background: white;
+}
+
+#banner span {
+  font-family: helvetica;
+  text-align: right;
+  color: #fff;
+  float: right;
+}
+
+.container .middle {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+
+.middle p {
+  font-style: italic;
+  color: #fff;
+  font-size: 20px;
+  font-family: serif;
+  padding-bottom: 50px;
+}
+
+#encartSara {
+  position: absolute;
+  margin-left: 960px;
+  margin-top: 130px;
+}
+
+.TraitBlancBanniere {
+  width: 1px;
+  height: 30px;
+  background-color: #FFF;
+  float: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.btn {
+
+  font-family: helvetica;
+  font-size:11px;
+  text-decoration: none;
+  color:#fff;
+  font-weight: bolder;
+  letter-spacing: 1px; 
+  margin-left:20px;
+}
+
+.btn img {
+  vertical-align: bottom;
+  padding-left: 7px;
+  padding-bottom: 2px;
+}
+
+.btn-yellow {
+ 
+  background-color:#fff186 ;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size:12px;
+  font-family: Verdana, sans-serif;
+  padding-right:35px;
+  padding-left:35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: black;
+}
+
+#btn-grey {
+  background-color: #e5e5e5;
+  border-radius: 25px;
+  font-family: Helvetica, sans-serif;
+  color: black;
+  text-align: right;
+  font-size: 10px;
+  font-weight: bolder;
+  padding-right:35px;
+  padding-left:35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+/** Style global des sections **/
+
+.section-white,
+.section-gray {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.section-white {
+  background-color: white;
+}
+.section-gray {
+  background-color: #f5f5f5;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+section p {
+  color: #666;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+/* Logos Press */
+.sponsor {
+
+  background-color: #f5f5f5;
+  text-align: center;
+  margin-top: 115px;
+}
+
+.sponsor img,
+.sponsor p {
+  vertical-align: middle;
+  padding:40px 0;
+  margin-left: 20px;
+  opacity: 0.3;
+  display: inline-block;
+}
+
+
+.hrcenter {
+
+  background-color: black;
+  width: 50%;
+  margin:auto;
+}
+
+.hrleft {
+
+  background-color: black;
+  width: 40%;
+  text-align:left;
+  float: left;
+}
+
+
+#start, #pages {
+  text-align: center;
+}
+
+#start .section-white {
+  padding-bottom: 0px;
+}
+
+.container-large {
+  width: 1014px;
+  margin: auto;
+}
+
+#screen {
+  position: relative;
+  z-index: 10;
+}  
+
+#screenblog {
+position: relative;
+  z-index: 10;
+}
+
+#leftarrow {
+  float:left;
+  display: inline-block;
+  padding-top: 260px;
+  padding-right:2px;
+  z-index: 1000;
+}
+
+#rightarrow {
+  float:right;
+  display: inline-block;
+  padding-top: 260px;
+  z-index: 1000;
+}
+
+.pave {
+  display: inline-block;
+  padding-right:30px;
+}
+
+.paveicons img {
+  display:inline;
+  text-align:center;
+  margin-right: 8px;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.verticale {
+
+  width: 2px;
+  height:400px;
+  background-color: silver;
+  margin-left: 55px;
+}
+
+#verticale2 {
+
+  color:#ffffff;
+  float: left;
+  margin-left: 45px;
+  padding-top: 4px;
+}
+
+
+#powerful {
+  display:inline-block;
+  float:right;
+  margin-top: 70px;
+}
+
+#rob {
+  border-radius: 50% ;
+  /*z-index:1000;*/
+  vertical-align: center;
+  position: absolute;
+  top: -15px;
+  left:-33px;
+}
+
+#logoseo {
+  float: right;
+  display: inline;
+  padding-top: 25px;
+  padding-right: 30px;
+}
+
+#encart {
+  display: inline-block;
+  float: left;
+  margin-bottom: 40px;
+}
+
+#bandeverte {
+  background-color:#58cb8e;
+  height:65px; 
+  width:380px;
+  display:block;
+  margin-top: 30px;
+  margin-left:30px;
+  position: relative;
+}
+
+blockquote {
+  font-style: italic;
+  display: inline-block;
+  margin: 0px;
+}
+
+.droite {
+  float: right;
+  display: inline-block;
+  width:50%;
+}
+
+.gauche {
+  float: left;
+  display: inline-block;
+  width:50%;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #181818;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+footer li{
+  list-style-type: none;
+  font-size: 13px;
+  color: gray;
+  font-family: Arial;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+#produit {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+
+#compagnie {
+  display: inline-block;
+  vertical-align: text-top;
+  float:center;
+  padding-left: 150px;
+}
+
+#communaute {
+  display: inline-block;
+  vertical-align: text-top;
+  padding-left: 150px;
+}
+
+#tryitfree {
+  display: inline-block;
+  float:right;
+  max-width: 200px;
+  padding:10;
+}
+
+#tryitfree li{
+  color:#ffffff;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 10px;
+  padding:8px;
+}
+#tryitfree a {
+  text-decoration: none;
+}
+
+#tryitfree img {
+  float:left; 
+}
+

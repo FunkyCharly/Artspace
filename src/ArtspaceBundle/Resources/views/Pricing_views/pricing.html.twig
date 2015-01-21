@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Pricing</title>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pricing.css') }}" />
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+  
+
+<script type="text/javascript" src="{{ asset('http://code.jquery.com/jquery-1.7.0.min.js')}}"></script>
+
+<script type="text/javascript" src="{{ asset('js/jquery.tooltipster.min.js')}}"></script>
+
+<script type="text/javascript" src="{{ asset('js/jquery.tooltipster.js')}}"></script>
+
+<script>
+  $(document).ready(function() {
+      $('.tooltip').tooltipster({
+          position: 'bottom',
+          positionTracker: true
+              
+      });
+  });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img id="logo" src={{ asset('assets/logo.png') }} alt="logo Artspace">
+        <nav>
+          <ul id="menutop">
+          <li><a href="{{ path('artspace_homepage')}}">TOUR</a></li>
+          <li><a href="#">TEMPLATES</a></li>
+          <li><a href="#">DEVELOPERS</a></li>
+          <li><a href="#"><strong>PRICING</strong></a></li>
+          <li><a href="#">LOGIN</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  <section id="banner">
+    <div class="container middle">
+      <h1>FREE 14-DAY TRIAL WITH 24/7 SUPPORT</h1>
+      <a href="#" class="btn-yellow">GET STARTED</a>
+    </div>
+      
+  </section>
+        <nav id="produitscategories" class="container">
+            <ul>
+                <li><a href="{{ path('artspace_categories', {'categorie':'standard'})}}">STANDARD //</a></li>
+                <li><a href="{{ path('artspace_categories', {'categorie':'pro'})}}"> PRO //</a></li>
+                <li><a href="{{ path('artspace_categories', {'categorie':'unlimited'})}}"> UNLIMITED</a></li>
+            </ul>
+        </nav>
+         
+  <section class="section-white">
+     
+    <div class="container">
+    <div class="pricing-bloc">
+    
+    {% for produit in listeproduit %}
+        <a href="{{ path('artspace_detail',{'id':produit.id}) }}">
+            <div class="cartouche">
+        
+      <h2>{{ produit.categorie }}</h2>
+      <hr>
+      <span>$</span><strong>{{ produit.prix }}</strong>
+      
+    <div class="mo">/MO</div>
+      <p>Billed annually or $10 month-to-month.</p>
+      
+            </div>
+        </a>
+      {% endfor %}
+      
+      </div>
+      </div>
+  </section>
+  <section class="section-white">
+    <div class="container">
+    <div class="gauche">
+      <dl>
+        <dt>HOW LONG ARE YOUR CONTACTS?</dt>
+        <hr><br>
+          <dd>Art.space plans are month-to-month, yearly, or two years.
+          We make it<br>simple to start-and stop-your service at any time. 
+          </dd>
+      </dl>
+      <dl>
+        <dt>IS THERE A DISCOUNT FOR YEARLY SERVICE?</dt>
+        <hr><br>
+          <dd>
+          Yes, we offer discounts on up-front long-term commitments.
+          </dd>
+      </dl>
+      <dl>
+        <dt>DO I NEED ANOTHER WEB HOST?</dt>
+        <hr><br>
+          <dd>
+            No. All Art.space plans include our fully-managed cloud hosting,<br>ensuring your website remains avalaible at all times.
+          </dd>
+      </dl>
+      <dl>
+        <dt>CAN I DOWNLOAD SQUARESPACE?</dt>
+        <hr><br>
+          <dd>No. Art.space is a fully-managed web service. We do not have plans<br>to make a downloadable version. Art.space does provide many<br>standard methods for exporting your data.
+          </dd>
+      </dl>
+      <dl>
+        <dt>DO YOUR OFFER EMAIL ACCOUNTS?</dt>
+        <hr><br>
+          <dd>While Art.space does not provide email accounts, you can easily link<br>your domain to Google Apps and get free email.
+          </dd>
+      </dl>
+    </div>
+    <div class="droite">
+      <dl>
+        <dt>HOW DO I SIGN UP?</dt>
+        <hr><br>
+          <dd>You start with a free trial. We don't collect your credit card until you've<br>determined Squarespace is the right product for you.
+          </dd>
+      </dl>
+      <dl>
+        <dt>HOW DO I CANCEL SERVICE?</dt>
+        <hr><br>
+          <dd>
+          Cancelling Art.space is an easy and no-questions-asked process.It's<br>done online right from your site manager.
+          </dd>
+      </dl>
+      <dl>
+        <dt>CAN I SWITCH PLANS?</dt>
+        <hr><br>
+          <dd>
+          Yes, at any time, in your website manager. When upgrading or
+          <br>downgrading your website plan, you will receive either a pro-rated<br>charge or refund, depending on the cost of your new plan.
+          </dd>
+      </dl>
+      <dl>
+        <dt>WHAT IS MEANT BY UNLIMITED?</dt>
+        <hr><br>
+          <dd>
+          Certain Art.space packages do not have resource limits for normal<br>usage. As per our Terms of Service, sites cannot exist for the sole<br>purpose of the file sharing.
+          </dd>
+      </dl>
+      <dl>
+        <dt>HAVE MORE QUESTIONS?</dt>
+        <hr><br>
+          <dd>Our support team is available 24/7 and usually responds in well under an<br>hour. Visit our <a href="#" style="color:#54ca90;">Help & Support Center</a> to contact them.</dd>
+      </dl>
+    </div>
+    </div>
+  </section> 
+  <footer>
+    <div class="container">
+      <ul id="produit">
+        <li><strong>PRODUCT</strong></li>
+        <li>Tour</li>
+        <li>Templates</li>
+        <li>Mobile Apps</li>
+        <li>Developers</li>
+        <li>Pricing</li>
+        <li>Sign Up</li>
+      </ul>
+      <ul id="compagnie">
+        <li><strong>COMPANY</strong></li>
+        <li>About</li>
+        <li>Careers</li>
+        <li>Press & Media</li>
+        <li>Environmental Impact</li>
+        <li>Affiliate Program</li>
+        <li>Terms of Service</li>
+        <li>Privacy Policy</li>
+        <li>Contact Us</li>
+      </ul>
+      <ul id="communaute">
+        <li><strong>COMMUNITY</strong></li>
+        <li>Blog</li>
+        <li>Help & Support</li>
+        <li>Answers</li>
+        <li>Workshops</li>
+        <li>Services Updates</li>
+        <li>Twitter</li>
+        <li>Facebook</li>
+        <li>Google+</li>
+        <li>Youtube</li>
+      </ul>
+      <ul id="tryitfree">
+        <li><a href="#" id="btn-grey">TRY IT FREE</a></li>
+        <br>
+        <li>Free 14-day trial.</li>
+        <li>No credit card required.</li>
+        <li>24/7 support.</li>
+        <li><img src="{{ asset('assets/footer-truste.png') }}" alt="logo de Trust-e" /></li>
+      </ul>
+    </div>
+  </footer>   
+</body>
+</html>

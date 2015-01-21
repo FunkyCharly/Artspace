@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artspace Accueil</title>
+  <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/flexslider.css')}}">
+</head>
+<body>
+  <header>
+
+    <div class="container">
+
+     <img id="logo" src="{{ asset('assets/logo.png')}}" alt="Artspace logo">
+      <nav>
+        <ul id="menutop">
+          <li><a href="#"><strong>TOUR</strong></a></li>
+          <li><a href="#">TEMPLATES</a></li>
+          <li><a href="#">DEVELOPERS</a></li>
+          <li><a href="{{ path('artspace_pricing')}}">PRICING</a> </li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="banner">
+    <div class="container middle">
+      <h1>Everything you need to create<br>an exceptional website</h1>
+        <p>Free 14-day trial with 24/7 support. No credit card required.</p>
+          <a href="#" class="btn-yellow">GET STARTED</a>
+          <a href="#" class="btn">WATCH DEMO<img src="assets/icon/iconwatchdemo.png" alt="icone watch demo"></a>
+      <div id="encartSara"><div class="TraitBlancBanniere"></div>
+      <span><strong>Sara blake</strong><br>Fine Artist</span>
+    </div>
+    </div>
+    <div class="sponsor">
+      <p>AS FEATURED IN</p>
+        <img src="assets/press/press-logo-fastco.png" alt="logo de Fast Company">
+        <img src="assets/press/press-logo-time.png" alt="logo Times">
+        <img src="assets/press/press-logo-forbes.png" alt="logo
+        Forbes">
+        <img src="assets/press/press-logo-techcrunch.png" alt="logo Techcrunch">
+        <img src="assets/press/press-logo-pandodaily.png" alt="logo Pandodaily">
+        <img src="assets/press/press-logo-betabeat.png" alt="logo Betabeat">
+    </div>
+  </section>
+  <section class="section-white" id="start">
+    <div  class="container-large">
+      <h2>STUNNING DESIGNS FROM THE START.</h2>
+        <hr class="hrcenter">
+          <p>Art.space starts you with beautiful templates right out of the box - each handcrafted by our <br>award-winning design team to make your content stand out.</p>
+    <div id="slider" class="flexslider">
+      <ul class="slides">
+      <li>
+        <img src="{{ asset('assets/slider_start/img1.png')}}" alt="image 1" />
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_start/img2.png')}}" alt="image 2" />
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_start/img3.png')}}"/>
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_start/img4.png')}}" alt="image 4" />
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_start/img5.png')}}" alt="image 5"/>
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_start/img6.png')}}" alt="image 6"/>
+      </li>
+      </ul>
+    </div>
+        <img id="screen" src="{{ asset('assets/large-cinema-display.png')}}" alt="écran d'ordinateur">
+    </div>
+  </section>
+  <section class="section-gray" id="pages">
+    <div class="container">
+      <h2>PAGES, GALLERIES AND BLOGS<br>ALL IN ONE PLATFORM.</h2>
+        <hr class="hrcenter">
+          <p>Whether you need simple pages, sophisticated galleries, or a professional blog - or any<br>
+          combination of each of those - it all comes standard with your website.</p>
+      <img src="{{ asset('assets/tour/tour-all-in-one.png')}}" alt="image all in one">
+    </div>
+  </section>
+  <section class="section-white" id="layout">
+    <div class="container">
+      <h2>INTRODUCING LAYOUTENGINE.<br>A NEW PAGE BUILDER FROM ARTSPACE.</h2>
+        <hr class="hrleft"><br>
+          <p>Our revolutionary LayoutEngine technology gives you the freedom to create visually rich pages
+          <br> with any configuration of text, images or blocks by dragging items exactly where you <br> want them. We lay things out in a perfect grid, so everything is always aligned. 
+          </p>
+          <img src="{{ asset('assets/tour/tour-layoutengine-video-poster.jpg')}}" alt="layout engine" width="960px">
+    </div>
+  </section>
+  <section class="section-gray" id="gallery">
+    <div class="container">
+      <h2>GALLERIES WITH CUTTING EDGE CREATIVE TOOLS</h2>
+        <hr class="hrleft"><br>
+        <p>Our photo galleries come with next-generation features you'll love. Enjoy easy uploading by<br> dragging files from you desktop into your browser. Edit images any time you want with Aviary.<br>  Select the focal point of each image, ensuring the best crop possible.
+        </p>
+          <img src="{{ asset('assets/tour/tour-gallery.jpg')}}" alt="gallerie">
+    </div>
+  </section>
+  <section class="section-white" id="blog">
+    <div class="container">
+      <h2>STATE-OF-THE-ART BLOGGING.</h2>
+        <hr class="hrleft"><br>
+          <p>Effortlessly create content with our Page Builder and gallery system. Share easily, map posts<br> with native geolocation, and use our bookmarklet to reblog content from the web.
+          </p> 
+    <div id="sliderblog" class="flexsliderblog">
+      <ul class="slides">
+      <li>
+        <img src="{{ asset('assets/slider_blog/tour-blog-backend.jpg')}}" alt="image du backend"/>
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_blog/tour-blog-frontend-dialog.jpg')}}" alt="image du dialogue front end" />
+      </li>
+      <li>
+        <img src="{{ asset('assets/slider_blog/tour-blog-frontend.jpg')}}" alt="image du front end"/>
+      </li>
+      </ul>
+    </div>
+        <img id="screenblog" src="{{ asset('assets/slider_blog/blogBackground.jpg')}}" alt="cadre du blog">
+    <div class="pave">
+      <h3>IMPORT STEAMLESSLY</h3>
+          <p>Start where you left off by importing all of your<br>content from Wordpress, Tumblr, Posterous,<br> Blogger, and Squarespace 5.
+          </p>
+    <div class="paveicons">
+      <img src="{{ asset('assets/icon/icon-wordpress-24-dark.png')}}" alt="icône wordpress">
+      <img src="{{ asset('assets/icon/icon-tumblr-24-dark.png')}}" alt="icône tumblr">
+      <img src="{{ asset('assets/icon/icon-posterous-24-dark.png')}}" alt="icône posterous">
+      <img src="{{ asset('assets/icon/icon-blogger-24-dark.png')}}" alt="icône blogger">
+      <img src="{{ asset('assets/icon/icon-artspace-24-dark.png')}}" alt="icône artspace">
+    </div>
+    </div>
+    <div class="pave">
+      <h3>PUSH CONTENT OUT</h3>
+          <p>Publicize your freshest content by setting your<br>blog to auto-publish to all of your favorite<br>social networks.
+          </p>
+    <div class="paveicons">
+      <img src="{{ asset('assets/icon/icon-facebook-24-dark.png')}}" alt="icône facebook">
+      <img src="{{ asset('assets/icon/icon-twitter-24-dark.png')}}" alt="icône twitter">
+      <img src="{{ asset('assets/icon/icon-google-24-dark.png')}}" alt="icône google">
+      <img src="{{ asset('assets/icon/icon-tumblr-24-dark.png')}}" alt="icône tumblr">
+    </div>
+    </div>
+    <div class="pave">
+      <h3>SHARE BUTTONS</h3>
+          <p>
+          Make it easy to share your content across the
+          <br> web by adding the social buttons you know
+          <br> your visitors use.
+          </p>
+    <div class="paveicons">
+      <img src="{{ asset('assets/icon/icon-facebook-24-dark.png')}}" alt="icône facebook">
+      <img src="{{ asset('assets/icon/icon-twitter-24-dark.png')}}" alt="icône twitter">
+      <img src="{{ asset('assets/icon/icon-google-24-dark.png')}}" alt="icône google">
+      <img src="{{ asset('assets/icon/icon-linkedin-24-dark.png')}}" alt="icône linkedin">
+      <img src="{{ asset('assets/icon/icon-stumbleupon-24-dark.png')}}" alt="icône stumbleupon">
+      <img src="{{ asset('assets/icon/icon-reddit-24-dark.png')}}" alt="icône reddit">
+      <img src="{{ asset('assets/icon/icon-pinterest-24-dark.png')}}" alt="icône pinterest">
+    </div>
+    </div>
+    </div>
+  </section>
+  <section class="section-gray" id="customlook">
+    <div class="container">
+      <h2>THE CUSTOM LOOK YOU WANT.</h2>
+        <hr class="hrleft"><br>
+          <p>Make any template your own with a few clicks in the style editor. Choose a preset color palette<br>or select your own fonts, colors, and layouts to create the custom look you want.
+          </p> 
+      <img src="{{ asset('assets/tour/tour-style-editor.jpg" alt="image éditeur de style')}}">
+    </div>
+  </section>
+  <section class="section-white" id="mobile" style="margin-bottom:540px;">
+    <div class="container">
+    <div class="gauche" style="display: inline-block; margin-top:60px;">    
+      <h2 style="margin-top:50px; max-width: 370px;">MOBILE SITES BUILT RIGHT IN.
+      </h2>
+        <hr class="hrleft"><br>
+          <p style="max-width: 370px;">
+           Each template includes a unique mobile<br>design, so anyone can see the beauty of your work<br>anytime, anyplace, on any device.
+          </p>
+      <img src="{{ asset('assets/tour/tour-mobile-logos.png')}}" alt="logos des téléphones mobiles">
+    </div>
+      <img src="{{ asset('assets/tour/tour-mobile.png')}}" class="droite" style="display: inline-block;" alt="image des téléphones mobiles">
+    </div>
+  </section>
+  <section class="section-gray" id="connect">
+    <div class="container">
+      <h2>CONNECT WITH THE SERVICES YOU LOVE.</h2>
+        <hr class="hrleft"><br>
+        <p>
+        Make your website the center of your online identity and social life with an array of<br>powerful tools. 
+        </p>
+      <img src="{{ asset('assets/tour/tour-social-blob.png')}}" alt="social-blob">
+    <div class="pave" style="float: right; padding-top: 100px;">
+      <h3>IMPORT</h3>
+        <p>Automatically pull in your latest Twitter<br> stream and Instagram photos to be<br>beautifully displayed on your site.
+        </p>
+      <h3>SYNC</h3>
+        <p>Take any page or gallery from your site and<br> seamlessly publish it on your Facebook Page. 
+        </p>
+      <h3>PUBLISH</h3>
+        <p>Let your blog automatically tweet for you<br>whenever you post something new.
+        </p>
+    </div>
+    </div>
+    </div>
+  </section>
+  <section class="section-white" id="comments">
+    <div class="container" style="margin-bottom: 145px;">
+      <img class="gauche" src="{{ asset('assets/tour/tour-comments.png')}}" alt="commentaires" style="display:inline-block;">
+    <div class="verticale" style="display:inline-block;">
+    </div>
+    <div id="powerful">
+      <h2>POWERFUL COMMENTING</h2>
+        <hr class="hrleft"><br>
+        <p>
+        Real-time posting and threading makes comment activity 
+        <br>easy to engage with. Our comment moderating and spam 
+        <br>filtering tools have never been more powerful. Your
+        <br>readers can login using Twitter and Facebook, and you 
+        <br>can integrate disqs.
+        </p>
+    </div>
+    </div>
+  </section>
+  <section class="section-gray" id="statistics">
+    <div class="container">
+      <h2>REAL-TIME STATISTICS FOR AUDIENCE INSIGHTS</h2>
+      <hr class="hrleft"><br>
+      <p>Access your built-in analytics to view the traffic and behavior of visitors in real-time. Learn where 
+      <br>they're coming from, and what keywords they're using to find you. 
+      </p>
+      <img src="{{ asset('assets/tour/tour-stats.jpg')}}" alt="tableau de statistiques">
+    </div>
+  </section>
+  <section class="section-white" id="search">
+    <div class="container">
+    <div class="gauche">
+      <h2>SEARCH ENGINE OPTIMIZED</h2>
+        <hr class="hrleft"><br>
+        <p>Art.space websites include clean article links, proper tagging,<br>XML sitemaps, and valid XHTML code. All of which make your<br>website loved by search engines.
+        </p>
+    </div>
+    <div class="droite">
+      <h2>CHOOSE YOUR CONTRIBUTORS</h2>
+        <hr class="hrleft"><br>
+        <p>
+        Invite contributors to help you manage your website. Set<br>
+        individual permissions, from full admin to a trusted commenter, so<br>you are always in control.
+        </p>
+      <img src="{{ asset('assets/tour/tour-contributors.png')}}" alt="Array of contributors">
+    </div>
+    <div id="encart">
+      
+    <div id="bandeverte">
+      <h4>Rob Space, CEO</h4>
+    <!-- <div id="verticale2"></div> -->
+        <p id="verticale2">|</p>
+      <img id="logoseo" src="{{ asset('assets/tour/SEOmoz-Logo-Copy.png')}}" alt="logo de SEO">
+      <img id="rob" src="{{ asset('assets/tour/tour-rob-space.jpg')}}" alt="photo de Rob Space">
+    </div>
+    </div>
+    <blockquote>
+      "The team has put together a remarkable 
+      <br>platform. Every aspect of the product - user experience,
+      <br>featureset, SEO friendliness, design and more - all work 
+      <br>together to create one of the few content management
+      <br>systems I'm proud to recommend"
+    </blockquote>
+    </div> 
+  </section>
+  <section class="section-white" id="cloud">
+    <div class="container" style="margin-bottom:415px;">
+    <div class="gauche">
+      <h2>CLOUD HOSTING FROM THE BEST.</h2>
+        <hr class="hrleft"><br>
+        <p>
+        With our reliable and scalable cloud infrastructure, there's no<br>downtime, and nothing to install, patch, or upgrade.
+        </p>
+      <img src="{{ asset('assets/tour/tour-clouds.png')}}" alt="image cloud artspace">
+    </div>
+    <div class="droite">
+      <h2>CUSTOM DOMAIN NAMES</h2>
+        <hr class="hrleft"><br>
+        <p>Art.space makes adding your custom domain simple,<br> and every annual account receives a free custom domain.
+        </p>
+      <img src="{{ asset('assets/tour/tour-domain.png')}}" alt="image tour domain">
+    </div> 
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <ul id="produit">
+        <li><strong>PRODUCT</strong></li>
+        <li>Tour</li>
+        <li>Templates</li>
+        <li>Mobile Apps</li>
+        <li>Developers</li>
+        <li>Pricing</li>
+        <li>Sign Up</li>
+      </ul>
+      <ul id="compagnie">
+        <li><strong>COMPANY</strong></li>
+        <li>About</li>
+        <li>Careers</li>
+        <li>Press & Media</li>
+        <li>Environmental Impact</li>
+        <li>Affiliate Program</li>
+        <li>Terms of Service</li>
+        <li>Privacy Policy</li>
+        <li>Contact Us</li>
+      </ul>
+      <ul id="communaute">
+        <li><strong>COMMUNITY</strong></li>
+        <li>Blog</li>
+        <li>Help & Support</li>
+        <li>Answers</li>
+        <li>Workshops</li>
+        <li>Services Updates</li>
+        <li>Twitter</li>
+        <li>Facebook</li>
+        <li>Google+</li>
+        <li>Youtube</li>
+      </ul>
+      <ul id="tryitfree">
+        <li><a href="#" id="btn-grey">TRY IT FREE</a></li>
+        <br>
+        <li>Free 14-day trial.</li>
+        <li>No credit card required.</li>
+        <li>24/7 support.</li>
+        <li><img src="{{ asset('assets/footer-truste.png')}}" alt="logo de Trust-e"></li>
+      </ul>
+    </div>
+  </footer> 
+<!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+<!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+   
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+
+      $('#sliderblog').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+<!-- Syntax Highlighter -->
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
+<!-- Optional FlexSlider Additions -->
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+artspace_homepage:
+    path:     /artspace
+    defaults: { _controller: ArtspaceBundle:Pricing:ShowArtspace }
+artspace_categories:
+    path:     /pricing/{categorie}
+    defaults: { _controller: ArtspaceBundle:Pricing:ShowCategorie, categorie:standard }
+artspace_detail:
+    path:   pricing/detail/{id}
+    defaults: { _controller: ArtspaceBundle:Pricing:ShowDetail }
+
