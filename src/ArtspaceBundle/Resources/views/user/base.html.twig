@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Cinéclub{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/p.css') }}" />
+    </head>
+    <body>
+        {% if (app.user == null) %}
+            <div>
+        <a class="prevnext" href="{{ path('login_route') }}">Connexion |</a>
+        <a class="prevnext" href="{{ path('register') }}"> Créer un compte</a>
+            </div>
+        {% else %}
+            <p>Bonjour {{ app.user.username }} !</p>
+            <a href="{{ path('logout') }}">Deconnexion</a>
+        {% endif %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

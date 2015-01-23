@@ -78,7 +78,9 @@ class UserController extends Controller
         return $this->render('ArtspaceBundle:user:register.html.twig', $params);
     }
     
-    
+    /**
+     * @Route("/login", name="login")
+     */
     public function loginAction(Request $request)
     {
 
@@ -114,12 +116,17 @@ class UserController extends Controller
         );
     }
     
+    /**
+     * @Route("/login_check", name="login_check")
+     */
     public function loginCheckAction()
     {
     
     }
 
-
+    /**
+     * @Route("/logout", name="logout")
+     */
     public function logoutAction()
     {
         

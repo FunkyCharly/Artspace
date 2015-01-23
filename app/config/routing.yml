@@ -7,7 +7,11 @@ app:
     type:     annotation
 
 login:
-    pattern:   /login
-    defaults:  { _controller: ArtspaceBundle:User:login }
+    path:     /login
+    defaults: { _controller: ArtspaceBundle:User:login }
 login_check:
-    pattern:   /login_check
+    path:     /login_check
+    defaults: { _controller: ArtspaceBundle:User:loginCheck }
+logout:
+    path:     /logout
+    defaults: { _controller: ArtspaceBundle:User:logout }

@@ -1,0 +1,7 @@
+{% block body %}
+{% for produit in userlisteproduit%}
+    {{ produit.categorie }}
+    {{ produit.prix }}
+{% endfor %}
+{% include 'includes/products_loop.html.twig' %}
+{% endblock body %}

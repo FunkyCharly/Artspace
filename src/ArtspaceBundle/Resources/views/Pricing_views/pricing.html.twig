@@ -29,13 +29,18 @@
     <div class="container">
       <img id="logo" src={{ asset('assets/logo.png') }} alt="logo Artspace">
         <nav>
-          <ul id="menutop">
+          {% if (app.user == null) %}
+            <ul id="menutop">
           <li><a href="{{ path('artspace_homepage')}}">TOUR</a></li>
           <li><a href="#">TEMPLATES</a></li>
-          <li><a href="#">DEVELOPERS</a></li>
           <li><a href="#"><strong>PRICING</strong></a></li>
-          <li><a href="#">LOGIN</a></li>
-          </ul>
+          <li><a href="{{ path('login') }}">LOGIN</a></li>
+          <li><a href="{{ path('register') }}">ACCOUNT</a></li>
+          {% else %}
+          <li>Bonjour {{ app.user.username }} !</li>
+          <li><a href="{{ path('logout') }}">LOGOUT</a></li>
+        </ul>
+          {% endif %}
         </nav>
     </div>
   </header>
@@ -46,6 +51,18 @@
     </div>
       
   </section>
+          
+         {# {% if (app.user == null) %}
+            <div>
+        <a href="{{ path('login') }}">Connexion |</a>
+        <a href="{{ path('register') }}"> Créer un compte</a>
+            </div>
+        {% else %}
+            <p>Bonjour {{ app.user.username }} !</p>
+            <a href="{{ path('logout') }}">Deconnexion</a>
+        {% endif %} #}
+          
+          
         <nav id="produitscategories" class="container">
             <ul>
                 <li><a href="{{ path('artspace_categories', {'categorie':'standard'})}}">STANDARD //</a></li>

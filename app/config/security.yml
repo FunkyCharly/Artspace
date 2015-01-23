@@ -1,16 +1,15 @@
 security:
-    providers:
-        in_memory:
-            memory: ~
-
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-            security: false
-
-        default:
+        secured_area:
+            pattern:    ^/
             anonymous: ~
-    
+            form_login:
+                login_path:  /login
+                check_path:  /login_check
+            logout:
+                path:   /logout
+                target: /
+
     providers:
         users:
             entity: { class: ArtspaceBundle:User, property: username }
@@ -19,7 +18,7 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/panier, roles: ROLE_USER }
         - { path: ^/user, roles: ROLE_USER }
-    
+
     encoders:
         ArtspaceBundle\Entity\User:
             algorithm: sha512
