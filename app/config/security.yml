@@ -10,3 +10,16 @@ security:
 
         default:
             anonymous: ~
+    
+    providers:
+        users:
+            entity: { class: ArtspaceBundle:User, property: username }
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/panier, roles: ROLE_USER }
+        - { path: ^/user, roles: ROLE_USER }
+    
+    encoders:
+        ArtspaceBundle\Entity\User:
+            algorithm: sha512

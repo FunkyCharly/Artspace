@@ -1,0 +1,51 @@
+<?php
+
+namespace ArtspaceBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+class RegistrationType extends AbstractType
+{
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('name', 'text')
+            ->add('firstname', 'text')
+            ->add('address', 'text')
+            ->add('email', 'email')
+            ->add('username', 'text')
+            ->add('password', 'repeated', array(
+                'type' => 'password',
+                'invalid_message' => 'Les mots de passe doivent correspondre',
+                'options' => array('required' => true),
+                'first_options'  => array('label' => 'Mot de passe'),
+                'second_options' => array('label' => 'Mot de passe (validation)'),
+            ))
+            ->add('Inscription !', 'submit')
+        ;
+    }
+    
+    /**
+     * @param OptionsResolverInterface $resolver
+     */
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => 'ArtspaceBundle\Entity\User'
+        ));
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return 'artspace_register';
+    }
+}
