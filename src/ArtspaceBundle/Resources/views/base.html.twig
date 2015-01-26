@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Pricing{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/pricing.css') }}" />
+    </head>
+    {% block body %}
+    <body>
+        <nav>
+          {# {% if (app.user == null) %} #}
+            <ul id="menutop">
+          <li><a href="{{ path('artspace_homepage')}}">TOUR</a></li>
+          <li><a href="#">TEMPLATES</a></li>
+          <li><a href="#"><strong>PRICING</strong></a></li>
+          <li><a href="{{ path('login') }}">LOGIN</a></li>
+          <li><a href="{{ path('register') }}">ACCOUNT</a></li>
+          {# {% else %} #}
+          <li>Bonjour {{ app.user.username }} !</li>
+          <li><a href="{{ path('logout') }}">LOGOUT</a></li>
+        </ul>
+          {# {% endif %} #}
+        </nav>
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+    {% endblock %}
+</html>

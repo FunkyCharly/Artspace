@@ -48,4 +48,21 @@ class PricingController extends Controller
     {
         return $this->render('ArtspaceBundle:Pricing_views:artspace.html.twig');
     }
+    
+    public function deleteProductAction($id){
+        
+       
+    
+    $em = $this->getDoctrine()->getManager();
+    $product = $em->getRepository('ArtspaceBundle:Product')->find($id);
+
+    $em->remove($product);
+    $em->flush();
+
+    return $this->redirect($this->generateUrl('artspace_categories'));
+    }
+    
+    public function showAdminAction(){
+        return $this->render('ArtspaceBundle:admin:backoffice.html.twig');
+    }
 }

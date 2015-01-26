@@ -1,3 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
 <div class="cartouche">
         
       <h2>{{ detail.categorie }}</h2>
@@ -6,5 +9,6 @@
       
     <div class="mo">/MO</div>
       <p>Billed annually or ${{ detail.prix }} month-to-month.</p>
-      <a href="#">Ajouter à mon panier !</a>
+      <a href="{{ path('add_panier', {'id': detail.id}) }}">Ajouter à mon panier !</a>
             </div>
+{% endblock body %}

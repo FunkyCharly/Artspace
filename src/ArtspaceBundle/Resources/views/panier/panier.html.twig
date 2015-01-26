@@ -1,7 +1,13 @@
+{% extends "base.html.twig" %}
+
 {% block body %}
 {% for produit in userlisteproduit%}
+    
+    <br/>
     {{ produit.categorie }}
     {{ produit.prix }}
+    
+<a href="{{ path('delete_panier', {'id': produit.id}) }}">supprimer du panier !</a>
 {% endfor %}
-{% include 'includes/products_loop.html.twig' %}
+
 {% endblock body %}

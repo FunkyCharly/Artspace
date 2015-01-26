@@ -9,15 +9,13 @@ use Symfony\Component\HttpFoundation\Request;
 
 class PanierController extends Controller
 {
-    /**
-     * @Route("/panier/add/{productId}", name="addToPanier", requirements={"productid":"\d+"})
-     */
-    public function addToPanierAction()
+
+    public function addToPanierAction($id)
     {
         $user = $this->getUser();
-        
+      
         $productRepo = $this->getDoctrine()->getRepository("ArtspaceBundle:Product");
-        $product = $productRepo->find();
+        $product = $productRepo->find($id);
         
         $product->addUser($user);
         $user->addProduct($product);
@@ -25,14 +23,12 @@ class PanierController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->flush();
     
-        //redirige vers productDetails avec un message
+        
         $this->addFlash("success", "le produit a bien été ajouté !");
-        return $this->redirect($this->generateUrl("viewPanier"));
+        return $this->redirect($this->generateUrl("panier"));
     }
     
-    /**
-     * @Route("/panier", name="viewPanier")
-     */
+    
     public function viewPanierAction(){
         $user = $this->getUser();
         $userlisteproduit = $user->getProducts();
@@ -40,6 +36,22 @@ class PanierController extends Controller
         $params = array(
             "userlisteproduit" => $userlisteproduit
         );
-        return $this->render("panier/panier.html.twig", $params);
+        return $this->render("ArtspaceBundle:panier:panier.html.twig", $params);
     }
+    
+    
+    public function deletePanierAction($id){
+        
+    $user = $this->getUser();    
+    
+    $em = $this->getDoctrine()->getManager();
+    $product = $em->getRepository('ArtspaceBundle:Product')->find($id);
+
+    $product->removeUser($user);
+    $em->flush();
+
+    return $this->redirect($this->generateUrl('panier'));
+    } 
+
+    
 }

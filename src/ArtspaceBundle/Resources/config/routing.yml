@@ -10,4 +10,18 @@ artspace_detail:
 register:
     path:     /register
     defaults: { _controller: ArtspaceBundle:User:register }
-
+panier:
+    path:     /panier
+    defaults: { _controller: ArtspaceBundle:Panier:viewPanier }
+add_panier:
+    path: /panier/add/{id}
+    defaults: { _controller: ArtspaceBundle:Panier:addToPanier }
+delete_panier:
+    path: /panier/delete/{id}
+    defaults: { _controller: ArtspaceBundle:Panier:deletePanier }
+delete_product:
+    path: /pricing/delete/{id}
+    defaults: { _controller: ArtspaceBundle:Pricing:deleteProduct }
+backoffice:
+    path: /admin
+    defaults: { _controller: ArtspaceBundle:Pricing:showAdmin }
