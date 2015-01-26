@@ -51,18 +51,7 @@
     </div>
       
   </section>
-          
-         {# {% if (app.user == null) %}
-            <div>
-        <a href="{{ path('login') }}">Connexion |</a>
-        <a href="{{ path('register') }}"> Créer un compte</a>
-            </div>
-        {% else %}
-            <p>Bonjour {{ app.user.username }} !</p>
-            <a href="{{ path('logout') }}">Deconnexion</a>
-        {% endif %} #}
-          
-          
+         
         <nav id="produitscategories" class="container">
             <ul>
                 <li><a href="{{ path('artspace_categories', {'categorie':'standard'})}}">STANDARD //</a></li>

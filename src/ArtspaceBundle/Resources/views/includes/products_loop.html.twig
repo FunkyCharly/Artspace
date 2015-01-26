@@ -2,13 +2,7 @@
 {% for produit in userlisteproduit %}
     
         
-        <a href="{{ path('ShowDetail', {'id': produit.id, 'prix': produit.prix, 'categorie': produit.categorie}) }}">
-        {# movie.title #}
-        
-        {# concaténation twig ! 
-         <img src="{{produit.poster}}" />#}
-        
-        </a>
+        <a href="{{ path('ShowDetail', {'id': detail.id}) }}">TEST</a>
 </div>
 {%endfor%}
 

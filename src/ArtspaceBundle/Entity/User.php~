@@ -369,44 +369,4 @@ class User implements UserInterface
     public function eraseCredentials() {
         
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add products
-     *
-     * @param \ArtspaceBundle\Entity\Product $products
-     * @return User
-     */
-    public function addProduct(\ArtspaceBundle\Entity\Product $products)
-    {
-        $this->products[] = $products;
-
-        return $this;
-    }
-
-    /**
-     * Remove products
-     *
-     * @param \ArtspaceBundle\Entity\Product $products
-     */
-    public function removeProduct(\ArtspaceBundle\Entity\Product $products)
-    {
-        $this->products->removeElement($products);
-    }
-
-    /**
-     * Get products
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getProducts()
-    {
-        return $this->products;
-    }
 }

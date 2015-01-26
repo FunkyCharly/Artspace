@@ -12,12 +12,12 @@ class PanierController extends Controller
     /**
      * @Route("/panier/add/{productId}", name="addToPanier", requirements={"productid":"\d+"})
      */
-    public function addToPanierAction($productId)
+    public function addToPanierAction()
     {
         $user = $this->getUser();
         
         $productRepo = $this->getDoctrine()->getRepository("ArtspaceBundle:Product");
-        $product = $productRepo->find($productId);
+        $product = $productRepo->find();
         
         $product->addUser($user);
         $user->addProduct($product);
@@ -40,6 +40,6 @@ class PanierController extends Controller
         $params = array(
             "userlisteproduit" => $userlisteproduit
         );
-        return $this->render("ArtspaceBundle:panier:view.html.twig", $params);
+        return $this->render("panier/panier.html.twig", $params);
     }
 }
