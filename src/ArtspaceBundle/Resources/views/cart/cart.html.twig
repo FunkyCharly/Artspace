@@ -1,0 +1,33 @@
+{# extends "CgEstockBundle:Stock:layout.html.twig" #}
+
+{# block body #}
+    <div class="alert alert-info">
+        <p class="badge badge-info"><i class="icon-list icon-white"></i> Panier</p>
+        <table id="id_datatable" class="display dataTable table table-striped table-bordered table-condensed" style="margin-top:10px">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th><th>
+                </tr>
+            </thead>
+            <tbody>
+            {% set total = 0 %}      
+            {% for p in products %}
+                <tr>
+                    <td>{{ p.categorie }}</td>
+                    <td>{{ p.prix ~' $'}}</td>
+                 <td><a href="{{ path('suppr_panier',{'opn':loop.index0} ) }}"> Supprimer </a></td>
+                   {# <td><a href="#"> Supprimer </a></td> #}
+                    {% set total = (total + p.prix) %}
+                    
+                </tr>                  
+            {% endfor %}
+                <tr>
+                    <td>{{ total }}</td>
+                </tr>                  
+            </tbody>
+        </table>                
+        
+        
+    </div>
+{# endblock #}

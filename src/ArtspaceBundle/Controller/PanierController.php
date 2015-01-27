@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class PanierController extends Controller
 {
 
-    public function addToPanierAction($id)
+    public function addToPanierAction($id)//devient addToCommande
     {
         $user = $this->getUser();
       

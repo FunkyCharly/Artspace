@@ -10,6 +10,15 @@ artspace_detail:
 register:
     path:     /register
     defaults: { _controller: ArtspaceBundle:User:register }
+view_cart:
+    path:     /cart
+    defaults: { _controller: ArtspaceBundle:Cart:viewCart }
+ajout_panier:
+    path:     /ajout-panier
+    defaults: { _controller: ArtspaceBundle:Cart:ajoutPanier }
+suppr_panier:
+    path:     /suppr-panier
+    defaults: { _controller: ArtspaceBundle:Cart:supprPanier }
 panier:
     path:     /panier
     defaults: { _controller: ArtspaceBundle:Panier:viewPanier }
