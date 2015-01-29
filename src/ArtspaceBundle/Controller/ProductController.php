@@ -10,18 +10,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use ArtspaceBundle\Entity\Product;
 use ArtspaceBundle\Form\ProductType;
 
-/**
- * Product controller.
- *
- * @Route("/backoffice")
- */
+
 class ProductController extends Controller
 {
 
     /**
      * Lists all Product entities.
      *
-     * @Route("/", name="backoffice")
+     * @Route("/admin/product", name="backoffice")
      * @Method("GET")
      * @Template()
      */

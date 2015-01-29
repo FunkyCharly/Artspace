@@ -25,7 +25,7 @@ class CommandeController extends Controller
     $commande->setEmail($user->getEmail());
     $commande->setStatut('ok');
     
-
+    $commande->setUser($user);
     $em = $this->getDoctrine()->getManager();
     $em->persist($commande);
     
@@ -67,7 +67,7 @@ class CommandeController extends Controller
         $params = array(
         'commande' => $commande,
                 );
-        
+                
         return $this->render("ArtspaceBundle:commande:recap.html.twig", $params);
     }
     

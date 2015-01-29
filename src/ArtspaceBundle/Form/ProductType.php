@@ -19,7 +19,10 @@ class ProductType extends AbstractType
             ->add('detail')
             ->add('prix')
             ->add('users')
-        ;
+            ->add('enregistrer','submit', array("attr" => array(
+                "formnovalidate" => "formnovalidate"
+            ))
+                 );
     }
     
     /**

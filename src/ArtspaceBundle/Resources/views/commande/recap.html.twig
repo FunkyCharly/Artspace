@@ -3,11 +3,11 @@
         
     {% for c in commande %} 
         <tr>
-        <td>{{ c.id }}</td>
+        <td>commande n° {{ c.id }}</td>
     <td>{{ c.username }}</td>
     <td>{{ c.email }}</td>
     <td>{{ c.Datecreated |date("d-m-Y H:i:s") }}</td>
-    <td>{{ c.total }}</td>
+    <td>Total :{{ c.total }} $</td>
         </tr>
    
    {% endfor %} 

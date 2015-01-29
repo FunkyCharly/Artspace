@@ -245,27 +245,4 @@ class Commande
     {
         return $this->statut;
     }
-
-    /**
-     * Set user
-     *
-     * @param \ArtspaceBundle\Entity\User $user
-     * @return Commande
-     */
-    public function setUser(\ArtspaceBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \ArtspaceBundle\Entity\User 
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
 }
