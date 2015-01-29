@@ -48,8 +48,8 @@ class Product
      * @ORM\JoinTable(name="user_product")
      */
     private $users;
-
-
+    
+    
     /**
      * Get id
      *

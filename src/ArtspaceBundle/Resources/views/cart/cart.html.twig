@@ -1,6 +1,5 @@
-{# extends "CgEstockBundle:Stock:layout.html.twig" #}
-
-{# block body #}
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pricing.css') }}" />
     <div class="alert alert-info">
         <p class="badge badge-info"><i class="icon-list icon-white"></i> Panier</p>
         <table id="id_datatable" class="display dataTable table table-striped table-bordered table-condensed" style="margin-top:10px">
@@ -22,6 +21,9 @@
                     
                 </tr>                  
             {% endfor %}
+            <tr><td><a href="{{ path('commande') }}">valider le panier</a></td>
+                <td><a href="{{ path('artspace_categories') }}">retour aux produits</a></td>
+            </tr>
                 <tr>
                     <td>{{ total }}</td>
                 </tr>                  
@@ -30,4 +32,4 @@
         
         
     </div>
-{# endblock #}
+{% endblock %}

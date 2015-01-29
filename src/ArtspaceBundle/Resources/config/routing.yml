@@ -31,6 +31,12 @@ delete_panier:
 delete_product:
     path: /pricing/delete/{id}
     defaults: { _controller: ArtspaceBundle:Pricing:deleteProduct }
-backoffice:
+backoffice_show:
     path: /admin
-    defaults: { _controller: ArtspaceBundle:Pricing:showAdmin }
+    defaults: { _controller: ArtspaceBundle:Product:show }
+commande:
+    path: /commande
+    defaults: { _controller: ArtspaceBundle:Commande:commandeSave }
+commande_recapitulatif:
+    path: /recap
+    defaults: { _controller: ArtspaceBundle:Commande:commandeView }

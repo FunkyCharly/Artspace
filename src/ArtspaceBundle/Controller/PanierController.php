@@ -34,8 +34,9 @@ class PanierController extends Controller
         $userlisteproduit = $user->getProducts();
         
         $params = array(
-            "userlisteproduit" => $userlisteproduit
-        );
+            "userlisteproduit" => $userlisteproduit,
+            "client"=>$user
+                );
         return $this->render("ArtspaceBundle:panier:panier.html.twig", $params);
     }
     

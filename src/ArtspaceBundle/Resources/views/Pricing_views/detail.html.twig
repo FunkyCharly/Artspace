@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{# {% block body %}
 <div class="cartouche">
         
       <h2>{{ detail.categorie }}</h2>
@@ -10,5 +10,31 @@
     <div class="mo">/MO</div>
       <p>Billed annually or ${{ detail.prix }} month-to-month.</p>
       <a href="{{ path('ajout_panier', {'produit_id': detail.id}) }}">Ajouter à mon panier !</a>
-            </div>
-{% endblock body %}
+            </div> 
+{% endblock body %} #}
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pricing.css') }}" />
+    <div class="container">
+    
+    <div class="free"><p>FREE</p></div>
+    <div class="cartouche">
+      <h2>{{ detail.categorie }}</h2>
+      <hr>
+      <span>$</span><strong>{{ detail.prix }}</strong>
+    <div class="mo">/MO</div>
+      <p>Billed annually or ${{ detail.prix }} month-to-month.</p>
+    </div>
+    <div class="pricing-bloc">
+      <ul>
+      <li class="tooltip" title="20 Pages, Galleries & Blogs !!!"> 20 Pages, Galleries & Blogs</li>
+      <li class="tooltip" title="500 GB Bandwith !! Wow !">500 GB Bandwith</li>
+      <li class="tooltip" title="2 GB Storage !! Rien que ça !?">2 GB Storage</li>
+      <li class="tooltip" title="Custom Domain, lorem ipsum">Custom Domain</li>
+      <li class="tooltip" title="24/7 à votre écoute !">24/7 Support</li>
+      <li><a href="{{ path('ajout_panier', {'produit_id': detail.id}) }}">Ajouter à mon panier !</a></li>
+      <li><a href="{{ path('artspace_categories') }}"> < Retour aux produits</a></li>
+      </ul>
+    </div>
+    </div>
+    
+    {% endblock body %}

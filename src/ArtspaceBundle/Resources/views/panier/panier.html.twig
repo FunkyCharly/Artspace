@@ -4,6 +4,7 @@
 {% for produit in userlisteproduit%}
     
     <br/>
+    {{ client.firstname}}
     {{ produit.categorie }}
     {{ produit.prix }}
     
@@ -11,3 +12,4 @@
 {% endfor %}
 
 {% endblock body %}
+

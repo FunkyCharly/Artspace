@@ -34,7 +34,7 @@ class CartController extends Controller
         
     public function supprPanierAction(Request $request)
     {
-        $opn = $request->query->get('view_cart');
+        $opn = $request->query->get('opn');
         $session = new Session();
         
         if ($session->has('panier'))

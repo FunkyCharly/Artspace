@@ -153,7 +153,8 @@ margin-top: 100px;
   width:410px;
   height:240px;
   background-color: #000 ;
-  margin: 20px;
+  margin: auto;
+  margin-top: 5%;
   
 }
 
@@ -186,7 +187,7 @@ margin-top: 100px;
   border-radius: 50%;
   position: absolute;
   margin-top: 412px;
-  margin-left: 170px;
+  margin-left: 450px;
 }
 
 .free p {
@@ -195,7 +196,7 @@ margin-top: 100px;
   font-style: normal;
   font-size: 12px;
   display: inline-block;
-  padding-top: 1px;
+  padding-top: 4px;
   padding-left: 8px;
   position: absolute;
 }
@@ -241,12 +242,8 @@ margin-top: 100px;
 }
 
 .pricing-bloc {
-/*  float: left;*/
   width: 410px;
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-top: 80px;
-  
+margin: auto;
 }
 
 .pricing-bloc ul {
