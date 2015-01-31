@@ -1,33 +1,69 @@
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/pricing.css') }}" />
+<h1>PRODUITS</h1>
+
+
+{% for p in products %}
+    <div class="produitsback">  
 <table>
+   <caption>Produit n°{{ p.id }}</caption>
 
    <tr>
-
-       <th>Clients</th>
-
-       <th>Commandes</th>
-
-       <th>Produits</th>
-
+      <thead><th>Catégorie</th>
+       <th>Prix</th>
+     </thead>
+       
    </tr>
-
    <tr>
-
-       <td>Carmen</td>
-
-       <td>33 ans</td>
-
-       <td>Espagne</td>
-
+       <td>{{ p.categorie }}</td>
+       <td>{{ p.prix }}</td>
+       
    </tr>
-
-   <tr>
-
-       <td>Michelle</td>
-
-       <td>26 ans</td>
-
-       <td>États-Unis</td>
-
-   </tr>
-
+   
 </table>
+       <br/>
+       <div class="operationsCrud">
+       <a href="#">modifier</a>
+       <br/>
+       <a href="#">supprimer</a>
+       </div>
+    </div>
+    {% endfor %}
+    <br/>
+    <br/>
+    <a href="{{ path('backoffice_create')}}">> Créer un nouveau produit</a>
+    
+    
+    <h1>COMMANDES</h1>
+    {% for c in commande %}
+    <table>
+   <caption>Commande n°{{ c.id }}</caption>
+
+   <tr>
+      <thead>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Date</th>
+      <th>Total</th>
+     </thead>
+       
+   </tr>
+   <tr>
+       <td>{{ c.username }}</td>
+       <td>{{ c.firstname }}</td>
+       <td>{{ c.datecreated|date("d-m-Y") }}</td>
+       <td>total :{{ c.total }}$</td>
+   </tr>
+   
+   <br/>
+       <a href="#">Détail de la commande</a>
+       
+    
+    <br/>
+    <br/>
+    
+    </table>
+    {% endfor %}
+    
+    
+    

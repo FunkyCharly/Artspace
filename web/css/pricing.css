@@ -6,22 +6,39 @@ body {
   width: 960px;
   margin: auto;
 }
+table
+{
+display:inline-block;    
+}
 
-
+.produitsback
+{
+    display: inline-block;
+}
+th,td,caption /* Toutes les cellules des tableaux... */
+{
+    border: 1px solid black; /* auront une bordure de 1px */
+    
+}
 
 header {
   background-color: white;
   width: auto;
 }
 
-#produitscategories ul{
-    margin: auto;
-    padding-left: 370px;
+#produitscategories{
+    
+   
+    padding-left: 38%;
 }
 
 #produitscategories li{
-    display: inline-block;
+    
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+     display: inline-block;
     text-align: center;
+    text-color: black;
  }
 
 

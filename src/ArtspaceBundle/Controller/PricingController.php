@@ -2,10 +2,13 @@
 
 namespace ArtspaceBundle\Controller;
 
-
-
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use ArtspaceBundle\Entity\Product;
+use ArtspaceBundle\Form\ProductType;
 
 
 class PricingController extends Controller
@@ -63,6 +66,51 @@ class PricingController extends Controller
     }
     
     public function showAdminAction(){
-        return $this->render('ArtspaceBundle:admin:backoffice.html.twig');
+        
+        $repository = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('ArtspaceBundle:Product');
+            $products = $repository->findAll();
+            
+            $repository = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('ArtspaceBundle:Commande');
+            $commande = $repository->findAll();
+            
+            $params = array(
+                'products'=> $products,
+                'commande'=> $commande
+            );
+            return $this->render('ArtspaceBundle:admin:backoffice.html.twig', $params);
+            }
+    
+    /**
+     * Creates a new Product entity.
+     *
+     * 
+     * @Method("POST")
+     * @Template("ArtspaceBundle:admin:form.html.twig")
+     */
+    public function createAction(Request $request)
+    {
+        $entity = new Product();
+        $form = $this->createForm(new ProductType(), $entity);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($entity);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('backoffice_show', array('id' => $entity->getId())));
+        }
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
     }
+
 }

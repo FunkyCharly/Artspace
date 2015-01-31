@@ -17,6 +17,10 @@ class CommandeController extends Controller
     public function commandeSaveAction()
     {
         $user = $this->getUser();
+        if (empty($user))
+        {
+            return $this->redirect($this->generateUrl('login'));
+        }else{
     $commande = new Commande();
     $commande->setDatecreated( new \DateTime() );
     $commande->setUsername($user->getUsername());
@@ -55,6 +59,7 @@ class CommandeController extends Controller
     
       return $this->redirect($this->generateUrl('commande_recapitulatif'));
 
+    }
     }
     public function commandeViewAction(){
         $user = $this->getUser();

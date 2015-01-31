@@ -6,8 +6,10 @@
         <td>commande n° {{ c.id }}</td>
     <td>{{ c.username }}</td>
     <td>{{ c.email }}</td>
-    <td>{{ c.Datecreated |date("d-m-Y H:i:s") }}</td>
+    <td>{{ c.Datecreated |date("d-m-Y") }}</td>
     <td>Total :{{ c.total }} $</td>
+   {# <a href="{{ path('view_cart')}}">Revenir au détail de la commande (panier)</a> #}
+    
         </tr>
    
    {% endfor %} 

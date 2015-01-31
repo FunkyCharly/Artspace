@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+
 class ProductType extends AbstractType
 {
     /**
@@ -18,7 +19,6 @@ class ProductType extends AbstractType
             ->add('categorie')
             ->add('detail')
             ->add('prix')
-            ->add('users')
             ->add('enregistrer','submit', array("attr" => array(
                 "formnovalidate" => "formnovalidate"
             ))
@@ -40,6 +40,6 @@ class ProductType extends AbstractType
      */
     public function getName()
     {
-        return 'artspacebundle_product';
+        return 'backoffice_create';
     }
 }
